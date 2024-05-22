@@ -12,21 +12,29 @@
 
 <body>
 <div class="box">
-    <input id="input" type="text" placeholder="Text-here">
-    <button class="add-btn"  onclick="AddItem ()" >Add</button>
-    <ul id="ul">
-    <!-- <li id="list">Hello</li>
-    <button onclick="deleteItem (event)"  >Delete</button> -->
-    </ul>
+    <h1 class="header">TO-DO-LIST</h1>
+    <!-- <div id="first-box"> -->
+        <input id="input" type="text" placeholder="Text-here">
+        <button class="add-btn"  onclick="AddItem ()" >Add</button>
+    <!-- </div> -->
+    <!-- <div id="second-box" > -->
+        <ul id="ul">
+        <li id="list">Hello</li>
+        <button onclick="deleteItem (event)"  >Delete</button>
+        </ul>
+    <!-- </div> -->
+
 </div>
 
 <script>
     // select input and ul tag
     let input = document.getElementById("input");
+    // let firstBox = doc.getElementById("first-box")
+    // let secondBox = doc.getElementById("second-box")
     let ul = document.getElementById("ul");
     // create add function 
     function AddItem (){
-        // create list item into selecting  ul  
+        // create list item into selecting  ul 
         let createList = document.createElement("li")
         // add delete button after getting input value and add event also
         createList.innerHTML = input.value+ "<button  onclick='deleteItem (event)'>Delete</button>"
