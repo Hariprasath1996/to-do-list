@@ -9,9 +9,10 @@
 <div>
 
     <input id="input" type="text">
-    <button onclick="Add ()" >Add</button>
+    <button onclick="AddItem ()" >Add</button>
     <ul id="ul">
-    <li id="list">Hello</li>
+    <!-- <li id="list">Hello</li>
+    <button onclick="deleteItem (event)"  >Delete</button> -->
     </ul>
 
 </div>
@@ -21,12 +22,20 @@
     let input = document.getElementById("input");
     let ul = document.getElementById("ul");
     // create add function 
-    function Add (){
+    function AddItem (){
         // create list item into selecting  ul  
         let createList = document.createElement("li")
-        createList.textContent = "hello"
+        // add delete button after getting input value and add event also
+        createList.innerHTML = input.value+ "<button  onclick='deleteItem (event)'>Delete</button>"
         ul.append(createList);
+        
     }
+    // create delete function 
+    // add event to the button 
+    function deleteItem (event){
+event.target.parentElement.remove()
+    }
+    
 </script>
 </body>
 </html>
