@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-DO-LIST</title>
+</head>
+<body>
+<div>
+
+    <input id="input" type="text">
+    <button onclick="Add ()" >Add</button>
+    <ul id="ul">
+    <li id="list">Hello</li>
+    </ul>
+
+</div>
+
+<script>
+    // select input and ul tag
+    let input = document.getElementById("input");
+    let ul = document.getElementById("ul");
+    // create add function 
+    function Add (){
+        // create list item into selecting  ul  
+        let createList = document.createElement("li")
+        createList.textContent = "hello"
+        ul.append(createList);
+    }
+</script>
+</body>
+</html>
