@@ -13,36 +13,44 @@
 <body>
 <div class="box">
     <h1 class="header">TO-DO-LIST</h1>
-    <!-- <div id="first-box"> -->
+    <div class="section-1">
         <input id="input" type="text" placeholder="Text-here">
         <button class="add-btn"  onclick="AddItem ()" >Add</button>
-    <!-- </div> -->
-    <!-- <div id="second-box" > -->
+    </div>
+    
+        <!-- create un-order list for create new items to below from it  -->
         <ul id="ul">
-        <li id="list">Hello</li>
-        <button onclick="deleteItem (event)"  >Delete</button>
+        
         </ul>
-    <!-- </div> -->
-
 </div>
 
 <script>
     // select input and ul tag
     let input = document.getElementById("input");
-    // let firstBox = doc.getElementById("first-box")
-    // let secondBox = doc.getElementById("second-box")
     let ul = document.getElementById("ul");
     // create add function 
     function AddItem (){
         // create list item into selecting  ul 
         let createList = document.createElement("li")
         // add delete button after getting input value and add event also
-        createList.innerHTML = input.value+ "<button  onclick='deleteItem (event)'>Delete</button>"
+        createList.innerHTML = input.value+ "<button id='btn'  onclick='deleteItem (event)'>Delete</button>"
         ul.append(createList);
-        
+        createList.setAttribute('style', `
+    width:auto;
+    height:3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0.2rem 0.2rem black, -0.2rem -0.2rem #961818;
+    border-radius: 5px;
+    background-color: aquamarine;
+    padding:1rem;
+    gap:5rem
+`);
     }
     // create delete function 
-    // add event to the button 
     function deleteItem (event){
 event.target.parentElement.remove()
 }

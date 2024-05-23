@@ -11,48 +11,57 @@ height: 100vh;
 }
 .box{
     width: 80%;
-    height: 60%;
+    height: auto;
     background-color: aquamarine;
     gap:2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 10%;
     position: absolute;
     left: 13rem;
+    margin-top: 10rem;
+}
+.section-1{
+    width:35rem;
+    height:5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0.2rem 0.2rem black, -0.2rem -0.2rem #961818;
+    border-radius: 5px;
+}
+#input{
+    width: 25rem;
+    height: 40%;
+    border-radius: 5px;
+    border: 2px solid rgb(0, 0, 0);
+}
+.add-btn{
+    width: 20%;
+    height: 45%;
+    border-radius: 5px;
+    border: 2px solid rgb(0, 0, 0);
+    background-color: black;
+    color: white;
+    cursor:pointer;
+}
 
-}
-#first-box{
-    width: 40%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background-color: bisque;
-    gap: 5rem;
-}
-#second-box{
-    width: 40%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background-color: bisque;
-    gap: 5rem;
-    margin-bottom: 20%;
-}
 
 #ul{
-    width: 30%;
-    height: 10%;
+    width: 50%;
+    height: auto;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    background-color: rgb(224, 196, 255);
-    gap: 5rem;
+    background-color: green;
+    gap: 2rem;
     margin-bottom: 20%;
+    border-radius: 10px;
+    border: 2px solid rgb(3, 3, 3);
+    padding:2rem;
+    display: block;
 }
